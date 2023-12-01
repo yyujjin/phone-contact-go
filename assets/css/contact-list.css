@@ -12,6 +12,9 @@ div{
     border-bottom: 1px solid rgb(239, 239,241);
     width: 270px;
 }
+span{
+    padding-right: 5px;
+}
 #add{
     background-image: url(..//images/추가버튼.jpg);
     background-repeat: no-repeat;
@@ -21,4 +24,27 @@ div{
     position: relative;
     top: 90px;
     left: 280px;
+}
+#deleteButton{
+    background-image: url(../images/리스트\ 삭제버튼.png);
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 40px;
+    height: 30px;
+}
+#editButton{
+    background-image: url(../images/리스트\ 수정버튼.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 5px;
 }

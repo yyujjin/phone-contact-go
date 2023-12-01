@@ -4,61 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-image: url(../assets/images/추가페이지.jpg);
-            background-repeat: no-repeat;
-            background-size: 380px;
-            font-family: 'NanumBarunGothicYetHangul';
-        }
-        input{
-            border: none;
-            
-        }
-        #cancleButton{
-            position: relative;
-            top: 72px;
-            left: 30px;
-            background-image: url(../assets/images/취소버튼.jpg);
-            background-repeat: no-repeat;
-            padding: 30px;
-            background-size: 85px;
-            border: none;
-        }
-        #doneButton{
-            position: relative;
-            top: 65px;
-            left: 210px;
-            background-image: url(../assets/images/완료버튼.jpg);
-            background-repeat: no-repeat;
-            padding: 25px;
-            background-size: 60px;
-            border: none;
-        }
-        #name{
-            position: relative;
-            top: 270px;
-            left: 40px;
-        }
-        #job{
-            position: relative;
-            top: 280px;
-            left: 40px;
-        }
-        #number{
-            position: relative;
-            top: 330px;
-            left: 140px;
-        }
-
-    </style>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/add-contact.css">
+    
 </head>
 <body>
     <button id="cancleButton" ></button>
     <button id="doneButton" ></button>
     <form action="">
         <div><input id="name" type="text" placeholder="이름"></div>
-        <div><input id="job" type="text" placeholder="직장"></div>
         <div><input id="number"  type="number" placeholder="전화" ></div>
     </form>
 </body>

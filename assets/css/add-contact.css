@@ -1,0 +1,40 @@
+body{
+    background-image: url(../images/추가페이지.jpg);
+    background-repeat: no-repeat;
+    background-size: 380px;
+    font-family: 'NanumBarunGothicYetHangul';
+}
+input{
+    border: none;
+    
+}
+#cancleButton{
+    position: relative;
+    top: 72px;
+    left: 30px;
+    background-image: url(../images/취소버튼.jpg);
+    background-repeat: no-repeat;
+    padding: 30px;
+    background-size: 85px;
+    border: none;
+}
+#doneButton{
+    position: relative;
+    top: 65px;
+    left: 210px;
+    background-image: url(../images/완료버튼.jpg);
+    background-repeat: no-repeat;
+    padding: 25px;
+    background-size: 60px;
+    border: none;
+}
+#name{
+    position: relative;
+    top: 275px;
+    left: 40px;
+}
+#number{
+    position: relative;
+    top: 360px;
+    left: 140px;
+}
