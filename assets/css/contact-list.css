@@ -16,7 +16,7 @@ div{
 span{
     padding-right: 5px;
 }
-#add{
+#addButton{
     background-image: url(..//images/추가버튼.jpg);
     background-repeat: no-repeat;
     background-size: 40px;
@@ -27,7 +27,7 @@ span{
     left: 280px;
     cursor: pointer;
 }
-#deleteButton{
+.deleteButtons{
     background-image: url(../images/리스트\ 삭제버튼.png);
     padding: 5px;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ span{
     height: 30px;
     cursor: pointer;
 }
-#editButton{
+.editButtons{
     background-image: url(../images/리스트\ 수정버튼.png);
     background-repeat: no-repeat;
     background-size: contain;
