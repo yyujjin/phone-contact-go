@@ -11,6 +11,7 @@ div{
     margin: 10px;
     border-bottom: 1px solid rgb(239, 239,241);
     width: 270px;
+    cursor: pointer;
 }
 span{
     padding-right: 5px;
@@ -24,6 +25,7 @@ span{
     position: relative;
     top: 90px;
     left: 280px;
+    cursor: pointer;
 }
 #deleteButton{
     background-image: url(../images/리스트\ 삭제버튼.png);
@@ -35,6 +37,7 @@ span{
     border: none;
     width: 40px;
     height: 30px;
+    cursor: pointer;
 }
 #editButton{
     background-image: url(../images/리스트\ 수정버튼.png);
@@ -46,5 +49,6 @@ span{
     width: 30px;
     height: 30px;
     position: relative;
-    top: 5px;
+    top: 4px;
+    cursor: pointer;
 }

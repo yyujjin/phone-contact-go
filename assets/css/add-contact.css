@@ -6,7 +6,7 @@ body{
 }
 input{
     border: none;
-    
+    cursor: pointer;
 }
 #cancleButton{
     position: relative;
@@ -17,6 +17,7 @@ input{
     padding: 30px;
     background-size: 85px;
     border: none;
+    cursor: pointer;
 }
 #doneButton{
     position: relative;
@@ -27,14 +28,17 @@ input{
     padding: 25px;
     background-size: 60px;
     border: none;
+    cursor: pointer;
 }
 #name{
     position: relative;
     top: 275px;
     left: 40px;
+    cursor: pointer;
 }
 #number{
     position: relative;
     top: 360px;
     left: 140px;
+    cursor: pointer;
 }
