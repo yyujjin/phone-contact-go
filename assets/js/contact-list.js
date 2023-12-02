@@ -1,4 +1,7 @@
 const addButton = document.querySelector("#addButton")
+addButton.addEventListener("click", function(){
+    location.href = "http://localhost:8080/add"
+})
 
 getUsers()
 
