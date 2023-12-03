@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strconv"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -43,9 +45,25 @@ func main() {
     c.JSON(200,users)
   })
 
+  r.DELETE("/delete/:id", func(c *gin.Context) {
+    id,err:= strconv.Atoi (c.Param("id"))  
+    if err != nil {
+			fmt.Println("경고")
+			c.IndentedJSON(http.StatusNotFound, gin.H{"message": "올바르지 않은 ID입니다."})
+			return
+		}
+    for i:=0; i<len(users); i++ {
+      if i==id{ 
+        c.IndentedJSON(http.StatusNotFound, gin.H{"deleteUser":users[i]})
+        users = append(users[:id], users[id+1:]... )
+        fmt.Println(users)      
+        return 
+      }
+    }
+    c.IndentedJSON(http.StatusNotFound, gin.H{"message": "올바르지 않은 ID입니다."})
+  })
 
 
-// fmt.Println(users)
 
 
 
