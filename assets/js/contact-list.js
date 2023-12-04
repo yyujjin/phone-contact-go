@@ -6,7 +6,7 @@ addButton.addEventListener("click", function () {
 })
 
 //go 에는 함수를 main 밖에있는 함수를 다 읽고 {}안으로 들어와서 다시 코드를 읽어내려가는데
-//java는 전역 함수부터 읽는거 없이 그냥 순서대로 내려가는것인가? 
+//java는 전역 함수부터 읽는거 없이 그냥 순서대로 내려가는것인가?
 //새로고침 하면 잠시 없어졌다가 사라지는데 이걸보기위해서 디버깅을 해야하는데 무슨 코드를 어떻게 선택하여 보는지 ?
 
 // let users = null  //null 이라 해도 됨? 아니면 안 적어도 됨 ? 자바니까?
@@ -41,6 +41,7 @@ function makeList(users) {
             deleteUser(i)
         })
     }
+    editUser()
 }
 
 async function deleteUser(i) {
@@ -55,5 +56,14 @@ async function deleteUser(i) {
         getUsers()
     } catch (error) {
         console.error("네트워크 오류:", error)
+    }
+}
+
+function editUser() {
+    const editButtons = document.querySelectorAll(".editButtons")
+    for (i = 0; i < editButtons.length; i++) {
+        editButtons[i].addEventListener("click", function () {
+            location.href = `http://localhost:8080/edit?id=${i}`
+        })
     }
 }

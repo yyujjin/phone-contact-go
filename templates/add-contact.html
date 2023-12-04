@@ -6,13 +6,12 @@
     <title>Document</title>
     <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/add-contact.css">
-    <script src="../assets/js/add-contact.js" defer ></script>
     
 </head>
 <body>
     <form action="/add" method="post" >
-    <a href="http://localhost:8080/list"><button id="cancleButton" ></button></a>
-    <button id="doneButton" type="submit" ></button>
+        <a href="http://localhost:8080/list"><button id="cancleButton" type="button" ></button></a>
+        <button id="doneButton" type="submit" ></button>
         <div><input id="name" name="name" type="text" placeholder="이름" required ></div>
         <div><input id="number" name="number" type="number"  placeholder="전화" required ></div>
     </form>
