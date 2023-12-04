@@ -63,8 +63,19 @@ func main() {
     c.IndentedJSON(http.StatusNotFound, gin.H{"message": "올바르지 않은 ID입니다."})
   })
 
-
-
+  r.POST("/add", func(c *gin.Context) {
+		var newUser user
+		if err := c.Bind(&newUser); err != nil {
+			return 
+		}
+		users = append(users,newUser)
+		fmt.Println(users)
+		// c.Redirect(http.StatusFound, "/list")
+		//안나타나니까 필요없음
+		c.JSON(http.StatusOK, gin.H{
+			"user" : newUser, 
+		})
+	})
 
 
 
