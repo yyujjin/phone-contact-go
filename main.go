@@ -84,5 +84,33 @@ func main() {
 	})
 
 
+  r.GET("/getId", func(c *gin.Context) { 
+		c.Query("id") 
+		id,_:= strconv.Atoi (c.Query("id"))  
+		fmt.Println(users[id])
+		c.JSON(200, users[id])
+	})
+
+  r.PUT("/edit/:id", func(c *gin.Context) {
+		var editUser user
+		if err := c.Bind(&editUser); err != nil {
+			return 
+		}
+		
+		id,err:= strconv.Atoi (c.Param("id"))  
+		fmt.Println(id)
+		if err != nil {
+			fmt.Println("경고")
+			c.IndentedJSON(http.StatusNotFound, gin.H{"message": "올바르지 않은 ID입니다."})
+			return
+		}
+
+		users[id]=editUser
+		
+		c.JSON(http.StatusOK, gin.H{
+			"user" : users[id], 
+		})
+	})
+
   r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
