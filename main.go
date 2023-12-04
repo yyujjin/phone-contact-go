@@ -39,12 +39,14 @@ func main() {
   r.GET("/edit", func(c *gin.Context) {
     c.HTML(http.StatusOK,"edit-contact.html", gin.H{})
   })
-
+  r.GET("/success", func(c *gin.Context) {
+    c.HTML(http.StatusOK,"seccess.html", gin.H{})
+  })
   r.GET("/getUsers", func(c *gin.Context) {
     fmt.Println(users)
     c.JSON(200,users)
   })
-
+  
   r.DELETE("/delete/:id", func(c *gin.Context) {
     id,err:= strconv.Atoi (c.Param("id"))  
     if err != nil {
@@ -71,11 +73,14 @@ func main() {
     fmt.Println(newUser)
 		users = append(users,newUser)
 		fmt.Println(users)
-		// c.Redirect(http.StatusFound, "/list")
-		//안나타나니까 필요없음
-		c.JSON(http.StatusOK, gin.H{
-			"user" : newUser, 
+    c.HTML(http.StatusOK, "success.html",gin.H{
 		})
+    //redirect 는 라우터만 됨?
+    // c.Redirect(http.StatusFound, "/success")
+    // c.Redirect(http.StatusFound, "http://localhost:8080/success")
+    // 이렇게는 안됨?
+    //몇초후에 redirect는 안됨?
+		
 	})
 
 

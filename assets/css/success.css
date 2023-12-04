@@ -1,0 +1,17 @@
+body{
+    background-image: url(../images/추가완료페이지.jpg);
+    background-repeat: no-repeat;
+    background-size: 380px;
+}
+button{
+    position: relative;
+    top: 550px;
+    left: 160px;
+    background-image: url(../images/친구리스트아이콘.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    padding: 30px;
+    border: none;
+    cursor: pointer;
+}
