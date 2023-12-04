@@ -20,7 +20,6 @@ func main() {
     Number int `form:"number"`
   }
   
-  //010붙이니까 안돼. 무슨 진수 뭐시기 하는데 뭔말
   users := []user{
     {"박유진",93927723},
     {"박수현",85566254},
@@ -39,7 +38,7 @@ func main() {
     c.HTML(http.StatusOK,"edit-contact.html", gin.H{})
   })
   r.GET("/success", func(c *gin.Context) {
-    c.HTML(http.StatusOK,"seccess.html", gin.H{})
+    c.HTML(http.StatusOK,"success.html", gin.H{})
   })
   r.GET("/getUsers", func(c *gin.Context) {
     fmt.Println(users)
@@ -74,14 +73,7 @@ func main() {
 		fmt.Println(users)
     c.HTML(http.StatusOK, "success.html",gin.H{
 		})
-    //redirect 는 라우터만 됨?
-    // c.Redirect(http.StatusFound, "/success")
-    // c.Redirect(http.StatusFound, "http://localhost:8080/success")
-    // 이렇게는 안됨?
-    //몇초후에 redirect는 안됨?
-		
 	})
-
 
   r.GET("/getId", func(c *gin.Context) { 
 		c.Query("id") 
@@ -95,7 +87,7 @@ func main() {
 		if err := c.Bind(&editUser); err != nil {
 			return 
 		}
-		
+
 		id,err:= strconv.Atoi (c.Param("id"))  
 		fmt.Println(id)
 		if err != nil {
@@ -105,11 +97,10 @@ func main() {
 		}
 
 		users[id]=editUser
-		
 		c.JSON(http.StatusOK, gin.H{
 			"user" : users[id], 
 		})
 	})
 
-  r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+  r.Run()
 }
