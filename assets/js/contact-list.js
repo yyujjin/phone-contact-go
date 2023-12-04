@@ -32,7 +32,7 @@ function makeList(users) {
                 <span>${users[i].Name}</span>
                 <span>${users[i].Number}</span>
                 <button class="deleteButtons"></button>
-                <button class="editButtons" ></button>
+                <button class="editButtons" type="button" ></button>
             </div>`
     }
     const deleteButtons = document.querySelectorAll(".deleteButtons")
@@ -63,6 +63,7 @@ function editUser() {
     const editButtons = document.querySelectorAll(".editButtons")
     for (i = 0; i < editButtons.length; i++) {
         editButtons[i].addEventListener("click", function () {
+            alert("삭제원함?")
             location.href = `http://localhost:8080/edit?id=${i}`
         })
     }
