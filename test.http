@@ -1,6 +1,15 @@
+@server = http://localhost:8080
+
+
 ###
-DELETE http://localhost:8080/delete/0
+DELETE http://localhost:8080/delete/
 
 ###
 get http://localhost:8080/getUsers
 
+###
+POST {{server}}/add
+Content-Type: application/x-www-form-urlencoded 
+
+name=유진
+&number=123456

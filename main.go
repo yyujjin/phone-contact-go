@@ -17,8 +17,8 @@ func main() {
 
   //이거 대문자 써야 먹히는 이유 
   type user struct{
-    Name string
-    Number int
+    Name string  `form:"name"`
+    Number int `form:"number"`
   }
   
   //010붙이니까 안돼. 무슨 진수 뭐시기 하는데 뭔말
@@ -68,6 +68,7 @@ func main() {
 		if err := c.Bind(&newUser); err != nil {
 			return 
 		}
+    fmt.Println(newUser)
 		users = append(users,newUser)
 		fmt.Println(users)
 		// c.Redirect(http.StatusFound, "/list")
@@ -76,8 +77,6 @@ func main() {
 			"user" : newUser, 
 		})
 	})
-
-
 
 
   r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")

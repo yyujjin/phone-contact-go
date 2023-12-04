@@ -21,12 +21,13 @@ input{
 }
 #doneButton{
     position: relative;
-    top: 65px;
-    left: 210px;
+    top: 70px;
+    left: 200px;
     background-image: url(../images/완료버튼.jpg);
     background-repeat: no-repeat;
-    padding: 25px;
-    background-size: 60px;
+    background-size: contain;
+    background-position-x: center;
+    padding: 30px;
     border: none;
     cursor: pointer;
 }
