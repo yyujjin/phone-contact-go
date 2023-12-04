@@ -11,11 +11,10 @@ import (
 
 
 func main() {
-  r := gin.Default() //이건 뭐야?
-  r.Static("/assets", "./assets")  //여기 main에 있는 코드들 그냥 복붙하면 되는거? 아님 외워야하는거? 코드를?
+  r := gin.Default() 
+  r.Static("/assets", "./assets") 
 	r.LoadHTMLGlob("templates/*")
 
-  //이거 대문자 써야 먹히는 이유 
   type user struct{
     Name string  `form:"name"`
     Number int `form:"number"`
