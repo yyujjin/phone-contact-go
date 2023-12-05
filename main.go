@@ -17,12 +17,12 @@ func main() {
 
   type user struct{
     Name string  `form:"name"`
-    Number int `form:"number"`
+    Number string `form:"number"`
   }
   
   users := []user{
-    {"박유진",93927723},
-    {"박수현",85566254},
+    {"박유진","010-9392-7723"},
+    {"박수현","010-8556-6254"},
   }
 
 
