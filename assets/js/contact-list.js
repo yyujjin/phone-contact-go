@@ -53,7 +53,6 @@ function editUser() {
     const editButtons = document.querySelectorAll(".editButtons")
     for (let i = 0; i < editButtons.length; i++) {
         editButtons[i].addEventListener("click", function () {
-            alert(i)
             location.href = `http://localhost:8080/edit?id=${i}`
         })
     }
